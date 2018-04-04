@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>fe-07-animacijos</title>
+        <style>
+            @keyframes judejimasg {
+                from {top:calc(40% - 0.75em);left: 0.25em; bottom: 0.25em}
+                to {top:20%;right:20%;bottom:20%;left:20%}
+            }
+            @keyframes judejimasb {
+                from {top:calc(40% - 0.75em); left: calc(40% - 0.75em);right: 0.25em; bottom: 0.25em}
+                to {top:20%;right:20%;bottom:20%;left:20%}
+            }
+            @keyframes judejimasr {
+                from {top: 0.25em;left: 20%;}
+                to {top:20%;right:20%;bottom:20%;left:20%}
+            }
+            #container {
+                background-color: lightgray;
+                width: 50vw;
+                height: 50vw;
+                margin: auto;
+                position: relative;
+            }
+            .r, .g, .b {
+                width: 60%;
+                height: 60%;
+                font-size: 3em;
+                color: white;
+                border: 0.25em solid;
+                border-radius: 50%;
+                animation-duration: 5s;
+                animation-delay:3s;
+                animation-fill-mode:both;
+                animation-direction:reverse;
+                /*animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+                animation-timing-function: cubic-bezier(0.68, -2, 0.265, 0);
+            }
+            .g {
+                background-color: rgb(0, 128, 0, 0.5);
+                border-color: green;
+                position: absolute;
+                left: 0.25em;
+                bottom: 0.25em; 
+                animation-name:judejimasg;
+            }
+            .b {
+                background-color: rgb(0, 0, 128, 0.5);
+                border-color: blue;
+                position: absolute;
+                right: 0.25em;
+                bottom: 0.25em; 
+                animation-name:judejimasb;
+
+            }
+            .r {
+                background-color: rgb(128, 0, 0, 0.5);
+                border-color: red;
+                position: absolute;
+                top: 0.25em;
+                left: 20%;
+                animation-name:judejimasr;
+            }
+            .t {
+                text-align: center;
+                position: relative;
+                top: calc(50% - 0.5em);
+            }
+        </style>
+    </head>
+    <body>
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mauris neque, gravida eget consectetur sit amet, volutpat vel justo. Pellentesque rhoncus dignissim venenatis. Vivamus urna metus, consequat a consectetur et, pretium sed lacus. Duis ac arcu non lectus malesuada blandit id eget quam. Vestibulum vel molestie orci, ut elementum nulla. Sed imperdiet faucibus leo, eget fermentum dolor volutpat non. Nulla eget suscipit libero. Aliquam non ullamcorper lacus. Praesent sit amet lorem sed quam imperdiet sollicitudin ac ac mauris. Nullam iaculis fringilla ipsum ullamcorper cursus. Phasellus ac molestie quam. 
+        </p>
+       <div id="container">
+            <div class="r"><div class="t">R</div></div>
+            <div class="g"><div class="t">G</div></div>
+            <div class="b"><div class="t">B</div></div>
+       </div>
+    </body>
+</html>
